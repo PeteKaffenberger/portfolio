@@ -15,21 +15,3 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-
-/* fixing anchor jumps */
-
-var nav_height = 70; // pixels
-
-$(window).bind('hashchange', function(e){
-    if($(location.hash).hasClass('anchor')){
-        scrollBy(0, nav_height);
-    }
-    return false;
-});
-$(document).ready(function(){
-    if($(location.hash).hasClass('anchor')){
-        $('html,body').animate({
-            scrollTop: $(location.hash).offset().top - nav_height - 10
-        }, 10 );
-    }
-});
