@@ -2,13 +2,23 @@
 /* Establishing border box properties*/
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
 }
 
 p {
     font-size: 16;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color:#2c2c54;
+    padding: 10px 10px 10px 10px;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
     background-color: white;
     color:#2c2c54;
 }
@@ -29,6 +39,15 @@ p {
     padding-left: 15px;
     padding-top: 5px;
     border-radius: 2px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: white;
+    color:#2c2c54;
 }
 
 .header nav {
@@ -50,9 +69,8 @@ nav a {
 }
 
 .hero {
-    height: 250px;
+    height: 200px;
     width: 100%;
-    margin-bottom: 25px;
     background-image: url("../images/cork-board.png");
     background-repeat: repeat-x;
 }
@@ -60,42 +78,94 @@ nav a {
 h2 {
     font-size: 24px;
     font-style: bold;
-    color:#2c2c54
+    color:#2c2c54;
+    padding: 20px;
+  clear: left;
+  text-align:center;
+  width: 100%;
+}
+
+#about-me {
+    text-align: center;
+    width: 100%;
+
 }
 
 #about-me-image {
         background-color: #fff;
-        width: 20%;
-        padding: 20px;
+        max-width: 30%;
+        height: auto;
+        padding: 5px;
         float:left;
+        display: flex;
+        border-radius: 50% 25%;
+        border-spacing: 10px;
+        justify-content: center;
+}
+
+.thumbnail:hover {
+    position:relative;
+    top:-5px;
+    left:-5px;
+    width:150%;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+
+.about-me-text {
+    padding: auto;
+    margin:auto;
+    text-align: justify;
+    
+
 }
 
 .container {
     padding: 10px;
     background: white;
+    border: #218c74 1px solid;
     border-radius: 5px;
     margin: auto;
-    box-shadow:1px #2c2c54;
+    box-shadow:5px #2c2c54;
     display: flex;
     flex-wrap: wrap;
-    height: 40%;
+    height: 20%;
     
 }
 
-.project-1 {
-    height: 50px;
-    width: 50px;
+.container p {
+padding: 10px;
 }
+.item {
+padding-right: 10px;
+
+}
+
+#project-1 {
+        background: white;
+        width: 100%;
+        height: auto;
+        color:#2c2c54;
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px;
+        margin: auto;
+        border: solid 2px #2c2c54;
+        
+    }
+
 
 #placeholderImage {
     display: flex;
+    padding: 10px 10px 10px 10px;
+    max-width: 100%;
 
 }
 
 .placeholderProject {
     background: white;
     color:#2c2c54;
-    padding: 15px;
+    padding: 10px 10px 10px 10px;
     border-radius: 5px;
     margin: auto;
     border: solid 2px #2c2c54
@@ -114,6 +184,9 @@ h2 {
 /* Setting font size for footer heading */
 .footer h2 {
     font-size: 20px;
+    background-color:#2c2c54;
+    color:#f7f1e3;
+
 }
 
 .footer ul li {
@@ -126,3 +199,38 @@ h2 {
         color: #f7f1e3;
         text-decoration: none;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 70px;
+  }
+
+
+
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav {
+      flex-direction: column;
+    }
+    /* Make the sidebar stack below the body */
+    aside {
+      order: 2;
+    }
+    /* Change the header background */
+    header {
+      background: #772014;
+    }
+    /* Change the navbar and footer background */
+    nav,
+    footer {
+      background-color: #2c2c54;
+    }
+  }
+  
