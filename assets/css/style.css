@@ -314,12 +314,14 @@ padding-right: 10px;
 
 
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     /* Use flex-direction to stack navbar links, sidebar, and body */
 
     .projectContainer  {
-      width: 100%;
-      display:block;
+    width: 100%;
+      display:flex;
+      flex-direction:column;
+
 
     }
 
@@ -396,25 +398,11 @@ display:block;
     }
 
 }
-    }
+    
 
-    @media screen and (max-width: 320px) {
-      .projectContainer {
-      width: 100%;
-      flex-direction: column;
-      display:block;
-      
+    @media screen and (min-width: 320px) {
+      .placeholderProject {
+
+    width: 100%;
       }
-      
-      .footer ul li a {
-        display: block;
-       width: 100%;
-        font-size: 16px;
-        margin: 5px 5px;
-        padding: 2px 5px 5px 5px;
-      
-      
-      
-      }
-      
           }
